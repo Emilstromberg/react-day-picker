@@ -99,15 +99,20 @@ export type DayPickerProps =
  * <DayPicker locale={es} />
  * ```
  */
-export function DayPicker(
+export function DayPicker({
+  props,
+  header
+}: {
   props:
     | DayPickerDefaultProps
     | DayPickerSingleProps
     | DayPickerMultipleProps
-    | DayPickerRangeProps
-): JSX.Element {
+    | DayPickerRangeProps;
+  header?: JSX.Element;
+}): JSX.Element {
   return (
     <RootProvider {...props}>
+      {header}
       <Root initialProps={props} />
     </RootProvider>
   );
