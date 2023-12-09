@@ -5,6 +5,7 @@ import { DayPickerSingleProps } from 'types/DayPickerSingle';
 
 import { Root } from './components/Root';
 import { RootProvider } from './contexts/RootProvider';
+import { NavigationContextValue, useNavigation } from 'contexts/Navigation';
 
 export type DayPickerProps =
   | DayPickerDefaultProps
@@ -101,19 +102,32 @@ export type DayPickerProps =
  */
 export function DayPicker({
   props,
-  header
+  Header
 }: {
   props:
     | DayPickerDefaultProps
     | DayPickerSingleProps
     | DayPickerMultipleProps
     | DayPickerRangeProps;
-  header?: JSX.Element;
+  Header?:
+    | React.ComponentType<{
+        navigation: NavigationContextValue;
+      }>
+    | undefined;
 }): JSX.Element {
   return (
     <RootProvider {...props}>
-      {header}
+      {Header && <CustomHeader Header={Header} />}
       <Root initialProps={props} />
     </RootProvider>
   );
 }
+
+const CustomHeader = ({
+  Header
+}: {
+  Header: React.ComponentType<{ navigation: NavigationContextValue }>;
+}) => {
+  const navigation = useNavigation();
+  return <Header navigation={navigation} />;
+};
