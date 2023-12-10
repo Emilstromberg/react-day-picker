@@ -114,7 +114,7 @@ importers:
         specifier: ^18.2.0
         version: 18.2.0(react@18.2.0)
       rimraf:
-        specifier: ^5.0.1
+        specifier: ^5.0.5
         version: 5.0.5
       rollup:
         specifier: ^3.29.3

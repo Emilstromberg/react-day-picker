@@ -1,17 +1,6 @@
 {
-  "name": "react-day-picker",
+  "name": "custom-react-day-picker",
   "version": "8.9.1",
-  "description": "Customizable Date Picker for React",
-  "author": "Giampaolo Bellavite <io@gpbl.dev>",
-  "homepage": "http://react-day-picker.js.org",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gpbl/react-day-picker"
-  },
-  "bugs": {
-    "url": "https://github.com/gpbl/react-day-picker/issues"
-  },
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "unpkg": "dist/index.min.js",
@@ -82,9 +71,5 @@
   "peerDependencies": {
     "date-fns": "^2.28.0",
     "react": "^16.8.0 || ^17.0.0 || ^18.0.0"
-  },
-  "funding": {
-    "type": "individual",
-    "url": "https://github.com/sponsors/gpbl"
   }
 }
