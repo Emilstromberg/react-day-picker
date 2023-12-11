@@ -1057,11 +1057,10 @@ type DayPickerProps = DayPickerDefaultProps | DayPickerSingleProps | DayPickerMu
  * <DayPicker locale={es} />
  * ```
  */
-declare function DayPicker({ props, Header }: {
-    props: DayPickerDefaultProps | DayPickerSingleProps | DayPickerMultipleProps | DayPickerRangeProps;
-    Header?: React.ComponentType<{
+declare function DayPicker({ Header, ...props }: DayPickerProps & {
+    Header: React.ComponentType<{
         navigation: NavigationContextValue;
-    }> | undefined;
+    }>;
 }): JSX.Element;
 
 /** The props for the {@link Button} component. */

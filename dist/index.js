@@ -3523,7 +3523,7 @@ function RootProvider(props) {
  * ```
  */
 function DayPicker(_a) {
-    var props = _a.props, Header = _a.Header;
+    var Header = _a.Header, props = __rest(_a, ["Header"]);
     return (jsxRuntimeExports.jsxs(RootProvider, __assign({}, props, { children: [Header && jsxRuntimeExports.jsx(CustomHeader, { Header: Header }), jsxRuntimeExports.jsx(Root, { initialProps: props })] })));
 }
 var CustomHeader = function (_a) {

@@ -100,21 +100,8 @@ export type DayPickerProps =
  * <DayPicker locale={es} />
  * ```
  */
-export function DayPicker({
-  props,
-  Header
-}: {
-  props:
-  | DayPickerDefaultProps
-  | DayPickerSingleProps
-  | DayPickerMultipleProps
-  | DayPickerRangeProps;
-  Header?:
-  | React.ComponentType<{
-    navigation: NavigationContextValue;
-  }>
-  | undefined;
-}): JSX.Element {
+export function DayPicker({ Header, ...props }: DayPickerProps & { Header: React.ComponentType<{ navigation: NavigationContextValue }> }
+): JSX.Element {
   return (
     <RootProvider {...props}>
       {Header && <CustomHeader Header={Header} />}
