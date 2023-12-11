@@ -105,15 +105,15 @@ export function DayPicker({
   Header
 }: {
   props:
-    | DayPickerDefaultProps
-    | DayPickerSingleProps
-    | DayPickerMultipleProps
-    | DayPickerRangeProps;
+  | DayPickerDefaultProps
+  | DayPickerSingleProps
+  | DayPickerMultipleProps
+  | DayPickerRangeProps;
   Header?:
-    | React.ComponentType<{
-        navigation: NavigationContextValue;
-      }>
-    | undefined;
+  | React.ComponentType<{
+    navigation: NavigationContextValue;
+  }>
+  | undefined;
 }): JSX.Element {
   return (
     <RootProvider {...props}>
