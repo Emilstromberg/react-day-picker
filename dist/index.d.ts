@@ -1057,7 +1057,7 @@ type DayPickerProps = DayPickerDefaultProps | DayPickerSingleProps | DayPickerMu
  * <DayPicker locale={es} />
  * ```
  */
-declare function DayPicker({ Header, ...props }: DayPickerProps & {
+declare function DayPicker(props: DayPickerProps & {
     Header: React.ComponentType<{
         navigation: NavigationContextValue;
     }>;

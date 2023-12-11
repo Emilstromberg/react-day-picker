@@ -3522,9 +3522,9 @@ function RootProvider(props) {
  * <DayPicker locale={es} />
  * ```
  */
-function DayPicker(_a) {
-    var Header = _a.Header, props = __rest(_a, ["Header"]);
-    return (jsxRuntimeExports.jsxs(RootProvider, __assign({}, props, { children: [Header && jsxRuntimeExports.jsx(CustomHeader, { Header: Header }), jsxRuntimeExports.jsx(Root, { initialProps: props })] })));
+function DayPicker(props) {
+    var Header = props.Header, restProps = __rest(props, ["Header"]);
+    return (jsxRuntimeExports.jsxs(RootProvider, __assign({}, restProps, { children: [Header && jsxRuntimeExports.jsx(CustomHeader, { Header: Header }), jsxRuntimeExports.jsx(Root, { initialProps: restProps })] })));
 }
 var CustomHeader = function (_a) {
     var Header = _a.Header;
