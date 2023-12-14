@@ -1,5 +1,5 @@
 {
-  "name": "custom-react-day-picker",
+  "name": "react-day-picker",
   "version": "8.9.1",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
